@@ -6,6 +6,12 @@ eval "$(starship init zsh)"
 
 export PATH="/opt/homebrew/opt/python@3.12/libexec/bin:$PATH"
 
+export NVM_DIR="$HOME/.nvm"
+# Load nvm
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+# Load nvim completion
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/ledmondson/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
