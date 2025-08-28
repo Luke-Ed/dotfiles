@@ -1,0 +1,9 @@
+[submodule ".config/nvim/pack/nvim/start/ale"]
+	path = .config/nvim/pack/nvim/start/ale
+	url = git@github.com:dense-analysis/ale.git
+[submodule ".config/nvim/pack/nvim/start/mini.nvim"]
+	path = .config/nvim/pack/nvim/start/mini.nvim
+	url = git@github.com:echasnovski/mini.nvim.git
+[submodule ".config/nvim/pack/nvim/start/nvim-lspconfig"]
+	path = .config/nvim/pack/nvim/start/nvim-lspconfig
+	url = git@github.com:neovim/nvim-lspconfig.git
