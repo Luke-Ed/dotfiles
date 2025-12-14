@@ -21,6 +21,7 @@ $haskell\
 $python\
 [](fg:green bg:sapphire)\
 $conda\
+$kubernetes\
 [](fg:sapphire bg:lavender)\
 $time\
 [ ](fg:lavender)\
@@ -52,7 +53,7 @@ Fedora = "󰣛"
 Alpine = ""
 Amazon = ""
 Android = ""
-AOSC = ""
+# AOSC = ""
 Arch = "󰣇"
 Artix = "󰣇"
 CentOS = ""
@@ -143,6 +144,11 @@ symbol = "  "
 style = "fg:crust bg:sapphire"
 format = '[$symbol$environment ]($style)'
 ignore_base = false
+
+[kubernetes]
+symbol = "☸ "
+style = "fg:crust bg:sapphire"
+format = '[$symbol$environment ]($style)'
 
 [time]
 disabled = false
