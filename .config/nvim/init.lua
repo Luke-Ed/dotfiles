@@ -24,7 +24,6 @@ vim.o.showmatch = true
 vim.o.wrap = true
 vim.o.colorcolumn = "100,120"
 vim.o.cindent = true
--- vim.o.cinoptions = "2"
 vim.o.shiftwidth = 2
 vim.o.tabstop = 2
 vim.o.expandtab = true
@@ -77,3 +76,44 @@ miniclue.setup({
     miniclue.gen_clues.z(),
   },
 })
+
+vim.diagnostic.config({
+  underline = true,
+  virtual_text = false,
+  signs = true,
+  update_in_insert = true
+})
+
+
+local diagnostic_hover_timer = nil
+local HOVER_DELAY = 250
+
+local function clear_timer()
+  if diagnostic_hover_timer then
+    diagnostic_hover_timer:stop()
+    diagnostic_hover_timer = nil
+  end
+end
+
+vim.api.nvim_create_autocmd({"CursorMoved", "InsertEnter", "BufLeave"}, {
+  callback = clear_timer,
+})
+
+vim.api.nvim_create_autocmd("CursorMoved", {
+  callback = function()
+    diagnostic_hover_timer = vim.defer_fn(function()
+      vim.diagnostic.open_float(nil, {
+        focus = false,
+        scope = cursor,
+        close_events = {
+          "CursorMoved",
+          "InsertEnter",
+          "BufLeave",
+        },
+        source = "if_many",
+        border = "rounded",
+      })
+    end, HOVER_DELAY)
+  end,
+})
+
