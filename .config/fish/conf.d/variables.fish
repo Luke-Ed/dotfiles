@@ -4,5 +4,5 @@ set -gx KUBE_EDITOR nvim
 set -gx SUDO_EDITOR nvim
 
 # Fish specific settings
-set --erase fish_greeting
+set fish_greeting
 
