@@ -1,0 +1,2 @@
+# Ignore Local Fish Configs
+.config/fish/local/*
