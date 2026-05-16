@@ -13,6 +13,8 @@ vim.lsp.config("harper_ls", {
   }
 })
 vim.lsp.enable("harper_ls")
+vim.lsp.enable("gopls")
+vim.lsp.enable("ts_ls")
 
 vim.o.number = true
 vim.o.visualbell = true
