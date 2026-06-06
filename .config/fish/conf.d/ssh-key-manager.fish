@@ -1,4 +1,4 @@
-set -l SSH_KEY_PATH "$HOME/.ssh/"(hostname)
+set -l SSH_KEY_PATH "$HOME/.ssh/"(hostname -s)
 
 if not test -f "$SSH_KEY_PATH"
   echo "No SSH Key at path: $SSH_KEY_PATH" >&2
