@@ -1,2 +1,3 @@
 # Ignore Local Fish Configs
 .config/fish/local/*
+.config/fish/fish_variables
